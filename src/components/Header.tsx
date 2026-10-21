@@ -1,18 +1,23 @@
 import { Link, NavLink } from 'react-router'
 import logo from '../assets/logo.svg'
+import { useAuth } from '../context/AuthContext'
 
 type NavItem = {
   to: string
   label: string
 }
 
-const navItems: NavItem[] = [
-  { to: '/', label: 'Home' },
-  { to: '/posts', label: 'Posts' },
-  { to: '/contact', label: 'Contact' },
-]
-
 function Header() {
+  const { signedIn } = useAuth()
+
+  const navItems: NavItem[] = [
+    { to: '/', label: 'Home' },
+    { to: '/posts', label: 'Posts' },
+    { to: '/contact', label: 'Contact' },
+    { to: '/liked', label: 'Liked' },
+    { to: '/signin', label: signedIn ? 'Account' : 'Sign in' },
+  ]
+
   return (
     <header className="site-header">
       <Link to="/" className="site-header__brand">
