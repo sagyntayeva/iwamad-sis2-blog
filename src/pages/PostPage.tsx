@@ -1,4 +1,5 @@
 import { Link, useParams } from 'react-router'
+import LikeButton from '../components/LikeButton'
 import Card from '../components/ui/Card'
 import Tag from '../components/ui/Tag'
 import { posts } from '../data/posts'
@@ -31,6 +32,9 @@ function PostPage() {
       {post.body.map((paragraph) => (
         <p key={paragraph}>{paragraph}</p>
       ))}
+      <div>
+        <LikeButton postId={post.id} />
+      </div>
     </article>
   )
 }

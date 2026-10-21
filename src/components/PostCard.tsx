@@ -1,5 +1,6 @@
 import { Link } from 'react-router'
 import type { Post } from '../types'
+import LikeButton from './LikeButton'
 import Card from './ui/Card'
 import Tag from './ui/Tag'
 
@@ -19,6 +20,7 @@ function PostCard({ post }: PostCardProps) {
       </div>
       <p>{post.summary}</p>
       <div className="post-card__actions">
+        <LikeButton postId={post.id} />
         <Link to={`/posts/${post.id}`}>Read more</Link>
       </div>
     </Card>
