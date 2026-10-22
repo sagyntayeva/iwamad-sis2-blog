@@ -57,4 +57,15 @@ export const posts: Post[] = [
       'A like counter was shared through React Context, and I wrote my first component test with Testing Library to check that a click changes the number.',
     ],
   },
+  {
+    id: 6,
+    title: 'My portfolio without a framework',
+    course: 'IWaMAD SIS 1',
+    tags: ['HTML5', 'CSS3', 'JavaScript'],
+    summary: 'A responsive portfolio with a dark mode toggle and my own form validation.',
+    body: [
+      'For SIS 1 I built my portfolio with plain HTML, CSS and JavaScript, and published it on GitHub Pages.',
+      'All colours are CSS variables, so dark mode only swaps them with one data-theme attribute. The contact form uses novalidate, and my own JavaScript shows different messages for an empty field and a wrong email.',
+    ],
+  },
 ]
